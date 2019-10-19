@@ -1,0 +1,21 @@
+<div>
+    <mat-table [dataSource]="events">
+        <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef>Event</mat-header-cell>
+            <mat-cell *matCellDef="let event">{{event.title}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+            <mat-cell *matCellDef="let event">{{event.date | date :'short'}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: tableColumns" (click)="onClickEvent(row)"></mat-row>
+    </mat-table>
+
+    <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+        <mat-progress-spinner color="primary" mode="indeterminate">
+        </mat-progress-spinner>
+    </mat-card>
+</div>

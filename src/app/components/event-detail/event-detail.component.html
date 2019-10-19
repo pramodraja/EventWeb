@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{eventDetail.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+           Date: {{eventDetail.date  | date :'short'}}
+        </p>
+        <p>
+           Description: {{eventDetail.description}}
+        </p>
+        <p>
+           Notes: {{eventDetail.notes}}
+        </p>
+        <button mat-raised-button routerLink="/event-list" color="primary">Back to the List</button>  
+    </mat-card-content>
+</mat-card>
+

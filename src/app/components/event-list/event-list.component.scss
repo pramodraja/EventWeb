@@ -1,0 +1,16 @@
+.mat-table {
+    width:60%;  
+    margin: 0 auto;
+}
+
+.mat-row:hover {
+    background-color: rgb(104, 193, 223);
+    cursor: pointer;
+}
+
+.mat-header-cell {
+    color: #4c2929;
+    font-size: 1.3vw;
+    display: flex;
+    font-weight: bold;
+}
